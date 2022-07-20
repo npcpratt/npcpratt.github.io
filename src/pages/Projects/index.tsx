@@ -1,74 +1,24 @@
-import Layout from '../components/Layout'
-import './projects.css'
-
-import highlight1 from '../images/projects/project1.png'
-import highlight2 from '../images/projects/project2.png'
-import thumbnail1 from '../images/projects/1.png'
-import thumbnail2 from '../images/projects/2.png'
-import thumbnail3 from '../images/projects/3.png'
-import thumbnail4 from '../images/projects/4.png'
-import thumbnail5 from '../images/projects/5.png'
-import thumbnail6 from '../images/projects/6.png'
-import thumbnail7 from '../images/projects/7.png'
-import thumbnail8 from '../images/projects/8.png'
-import thumbnail9 from '../images/projects/9.png'
-import thumbnail10 from '../images/projects/10.png'
-import thumbnail11 from '../images/projects/11.png'
-import thumbnail12 from '../images/projects/12.png'
-import thumbnail13 from '../images/projects/13.png'
-import thumbnail14 from '../images/projects/14.png'
-import thumbnail15 from '../images/projects/15.png'
 import { useState } from 'react'
-
-const ProjectArray = ({ type, title, certification, array }: any) => {
-  let content;
-  if (type === 'text') content = (
-    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-3 mb-8'>
-      {
-        array.map((project: any) => {
-          return (
-            <div className='border flex justify-between items-center bg-gray-50 px-4 py-2 rounded-md hover:bg-white shadow hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-100'>
-              <div className="cursor-default">{project.name}</div>
-              <a href={project.link} className='hover:underline ml-4 border-l-2 pl-2 whitespace-nowrap'>View <i className='fa fa-external-link text-xs'></i></a>
-            </div>
-          )
-        })
-      }
-    </div>
-  )
-  else content = (
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 py-3 mb-8">
-      {
-        array.map((project: any) => {
-          return (
-            <div className="w-full border group relative bg-gray-50 rounded-lg overflow-hidden shadow transition-all duration-100 transform hover:-translate-y-0.5 hover:shadow-md hover:bg-white">
-              <div className="relative w-full h-auto bg-gray-200">
-                <img src={project.image} alt="Thumbnail" />
-                <div className='flex justify-evenly items-center absolute top-0 w-full h-full bg-white bg-opacity-70 opacity-0 group-hover:opacity-100 transition-all duration-100' style={{ backdropFilter: 'blur(20px)' }}>
-                  <a href={project.link} className='flex items-center px-2 py-1 text-lg text-white rounded-md bg-blue-700 hover:bg-blue-600 active:bg-blue-800'>View<i className='fa fa-external-link text-xs ml-1.5'></i></a>
-                  <a href={project.source} className='px-2 py-1 text-lg text-white rounded-md bg-gray-700 hover:bg-gray-600 active:bg-gray-800'>Source<i className='fab fa-github ml-1.5'></i></a>
-                </div>
-              </div>
-              <div className='flex items-center justify-between py-2 px-3 cursor-default'>
-                {project.name}
-              </div>
-            </div>
-          )
-        })
-      }
-    </div>
-  )
-  return (
-    <div className='my-20'>
-      <div className='flex items-center justify-between my-2'>
-        <h3 className='font-bold'>{title}</h3>
-        <a href={certification} className='whitespace-nowrap px-2 py-1 ml-4 rounded-md text-white bg-blue-700 hover:bg-blue-600 active:bg-blue-800 transition-all'>View Certification</a>
-      </div>
-      <hr />
-      {content}
-    </div>
-  )
-}
+import Layout from '../../components/Layout'
+import thumbnail01 from '../../images/projects/01.png'
+import thumbnail02 from '../../images/projects/02.png'
+import thumbnail03 from '../../images/projects/03.png'
+import thumbnail04 from '../../images/projects/04.png'
+import thumbnail05 from '../../images/projects/05.png'
+import thumbnail06 from '../../images/projects/06.png'
+import thumbnail07 from '../../images/projects/07.png'
+import thumbnail08 from '../../images/projects/08.png'
+import thumbnail09 from '../../images/projects/09.png'
+import thumbnail10 from '../../images/projects/10.png'
+import thumbnail11 from '../../images/projects/11.png'
+import thumbnail12 from '../../images/projects/12.png'
+import thumbnail13 from '../../images/projects/13.png'
+import thumbnail14 from '../../images/projects/14.png'
+import thumbnail15 from '../../images/projects/15.png'
+import highlight1 from '../../images/projects/project1.png'
+import highlight2 from '../../images/projects/project2.png'
+import ProjectArray from './ProjectArray'
+import './projects.css'
 
 const Projects = () => {
 
@@ -138,32 +88,32 @@ const Projects = () => {
                 {
                   name: 'Tribute Page',
                   link: 'https://npcpratt.github.io/fCC-projects/html-css/tribute-page',
-                  source: 'https://github.com/pratvar/fCC-projects/tree/master/html-css/tribute-page',
-                  image: thumbnail1
+                  source: 'https://github.com/npcpratt/fCC-projects/tree/master/html-css/tribute-page',
+                  image: thumbnail01
                 },
                 {
                   name: 'Survey Form',
                   link: 'https://npcpratt.github.io/fCC-projects/html-css/survey-form',
-                  source: 'https://github.com/pratvar/fCC-projects/tree/master/html-css/survey-form',
-                  image: thumbnail2
+                  source: 'https://github.com/npcpratt/fCC-projects/tree/master/html-css/survey-form',
+                  image: thumbnail02
                 },
                 {
                   name: 'Product Landing Page',
                   link: 'https://npcpratt.github.io/fCC-projects/html-css/product-landing-page',
-                  source: 'https://github.com/pratvar/fCC-projects/tree/master/html-css/product-landing-page',
-                  image: thumbnail3
+                  source: 'https://github.com/npcpratt/fCC-projects/tree/master/html-css/product-landing-page',
+                  image: thumbnail03
                 },
                 {
                   name: 'Technical Documentation Page',
                   link: 'https://npcpratt.github.io/fCC-projects/html-css/technical-documentation-page',
-                  source: 'https://github.com/pratvar/fCC-projects/tree/master/html-css/technical-documentation-page',
-                  image: thumbnail4
+                  source: 'https://github.com/npcpratt/fCC-projects/tree/master/html-css/technical-documentation-page',
+                  image: thumbnail04
                 },
                 {
                   name: 'Personal Portfolio Webpage',
                   link: 'https://npcpratt.github.io/fCC-projects/html-css/personal-portfolio-webpage',
-                  source: 'https://github.com/pratvar/fCC-projects/tree/master/html-css/personal-portfolio-webpage',
-                  image: thumbnail5
+                  source: 'https://github.com/npcpratt/fCC-projects/tree/master/html-css/personal-portfolio-webpage',
+                  image: thumbnail05
                 },
               ]}
             />
@@ -174,23 +124,23 @@ const Projects = () => {
               array={[
                 {
                   name: 'Palindrome Checker',
-                  link: 'https://github.com/pratvar/fCC-projects/blob/master/javascript/palindrome-checker.js',
+                  link: 'https://github.com/npcpratt/fCC-projects/blob/master/javascript/palindrome-checker.js',
                 },
                 {
                   name: 'Romal Numeral Converter',
-                  link: 'https://github.com/pratvar/fCC-projects/blob/master/javascript/roman-numeral-converter.js',
+                  link: 'https://github.com/npcpratt/fCC-projects/blob/master/javascript/roman-numeral-converter.js',
                 },
                 {
                   name: 'Caesars Cipher',
-                  link: 'https://github.com/pratvar/fCC-projects/blob/master/javascript/caesars-cipher.js',
+                  link: 'https://github.com/npcpratt/fCC-projects/blob/master/javascript/caesars-cipher.js',
                 },
                 {
                   name: 'Telephone Number Validator',
-                  link: 'https://github.com/pratvar/fCC-projects/blob/master/javascript/telephone-number-validator.js',
+                  link: 'https://github.com/npcpratt/fCC-projects/blob/master/javascript/telephone-number-validator.js',
                 },
                 {
                   name: 'Cash Register',
-                  link: 'https://github.com/pratvar/fCC-projects/blob/master/javascript/cash-register.js',
+                  link: 'https://github.com/npcpratt/fCC-projects/blob/master/javascript/cash-register.js',
                 },
               ]}
             />
@@ -201,31 +151,31 @@ const Projects = () => {
                 {
                   name: 'Random Quote Machine',
                   link: 'https://npcpratt.github.io/fCC-projects/frontend-libs/random-quote',
-                  source: 'https://github.com/pratvar/fCC-projects/tree/master/frontend-libs/random-quote',
-                  image: thumbnail6
+                  source: 'https://github.com/npcpratt/fCC-projects/tree/master/frontend-libs/random-quote',
+                  image: thumbnail06
                 },
                 {
                   name: 'Markdown Previewer',
                   link: 'https://npcpratt.github.io/fCC-projects/frontend-libs/markdown-previewer',
-                  source: 'https://github.com/pratvar/fCC-projects/tree/master/frontend-libs/markdown-previewer',
-                  image: thumbnail7
+                  source: 'https://github.com/npcpratt/fCC-projects/tree/master/frontend-libs/markdown-previewer',
+                  image: thumbnail07
                 },
                 {
                   name: 'Drum Machine',
                   link: 'https://npcpratt.github.io/fCC-projects/frontend-libs/drum-machine',
-                  source: 'https://github.com/pratvar/fCC-projects/tree/master/frontend-libs/drum-machine',
-                  image: thumbnail8
+                  source: 'https://github.com/npcpratt/fCC-projects/tree/master/frontend-libs/drum-machine',
+                  image: thumbnail08
                 },
                 {
                   name: 'JavaScript Calculator',
                   link: 'https://npcpratt.github.io/fCC-projects/frontend-libs/js-calculator',
-                  source: 'https://github.com/pratvar/fCC-projects/tree/master/frontend-libs/js-calculator',
-                  image: thumbnail9
+                  source: 'https://github.com/npcpratt/fCC-projects/tree/master/frontend-libs/js-calculator',
+                  image: thumbnail09
                 },
                 {
                   name: '25 + 5 Clock',
                   link: 'https://npcpratt.github.io/fCC-projects/frontend-libs/pomodoro-timer',
-                  source: 'https://github.com/pratvar/fCC-projects/tree/master/frontend-libs/pomodoro-timer',
+                  source: 'https://github.com/npcpratt/fCC-projects/tree/master/frontend-libs/pomodoro-timer',
                   image: thumbnail10
                 },
               ]}
@@ -237,31 +187,31 @@ const Projects = () => {
                 {
                   name: 'Bar Chart',
                   link: 'https://npcpratt.github.io/fCC-projects/data-visualization/bar-chart',
-                  source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/bar-chart',
+                  source: 'https://github.com/npcpratt/fCC-projects/tree/master/data-visualization/bar-chart',
                   image: thumbnail11
                 },
                 {
                   name: 'Scatterplot Graph',
                   link: 'https://npcpratt.github.io/fCC-projects/data-visualization/scatterplot-graph',
-                  source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/scatterplot-graph',
+                  source: 'https://github.com/npcpratt/fCC-projects/tree/master/data-visualization/scatterplot-graph',
                   image: thumbnail12
                 },
                 {
                   name: 'Heat Map',
                   link: 'https://npcpratt.github.io/fCC-projects/data-visualization/heat-map',
-                  source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/heat-map',
+                  source: 'https://github.com/npcpratt/fCC-projects/tree/master/data-visualization/heat-map',
                   image: thumbnail13
                 },
                 {
                   name: 'Choropleth Map',
                   link: 'https://npcpratt.github.io/fCC-projects/data-visualization/choropleth-map',
-                  source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/choropleth-map',
+                  source: 'https://github.com/npcpratt/fCC-projects/tree/master/data-visualization/choropleth-map',
                   image: thumbnail14
                 },
                 {
                   name: 'Treemap Diagram',
                   link: 'https://npcpratt.github.io/fCC-projects/data-visualization/treemap',
-                  source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/treemap',
+                  source: 'https://github.com/npcpratt/fCC-projects/tree/master/data-visualization/treemap',
                   image: thumbnail15
                 },
               ]}

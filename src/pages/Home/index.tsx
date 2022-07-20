@@ -1,8 +1,34 @@
-import Layout from '../components/Layout'
-import profile from '../images/profile.png'
 import { Link } from 'react-router-dom'
+import Layout from 'components/Layout'
+import profile from 'images/profile.png'
 
-const IndexPage = () => {
+import reactLogo from 'images/icons/react.svg'
+import sassLogo from 'images/icons/sass.svg'
+import tailwindLogo from 'images/icons/tailwind.svg'
+import gatsbyLogo from 'images/icons/gatsby.svg'
+import bootstrapLogo from 'images/icons/bootstrap.svg'
+import jqueryLogo from 'images/icons/jquery.svg'
+import d3Logo from 'images/icons/d3.svg'
+import muiLogo from 'images/icons/mui.svg'
+
+import figmaLogo from 'images/icons/figma.svg'
+import vscodeLogo from 'images/icons/vscode.svg'
+import photoshopLogo from 'images/icons/photoshop.svg'
+import xdLogo from 'images/icons/xd.svg'
+
+import firebaseLogo from 'images/icons/firebase.svg'
+import graphqlLogo from 'images/icons/graphql.svg'
+import postmanLogo from 'images/icons/postman.svg'
+import awsLogo from 'images/icons/aws.svg'
+
+import htmlLogo from 'images/icons/html.svg'
+import cssLogo from 'images/icons/css.svg'
+import jsLogo from 'images/icons/js.svg'
+import pythonLogo from 'images/icons/python.svg'
+import cppLogo from 'images/icons/cpp.svg'
+import csharpLogo from 'images/icons/csharp.svg'
+
+const Home = () => {
 
   const description = "Hi, I'm Pratik V, a front-end developer. I design and build websites with simple, beautiful and responsive UIs. This is my personal website and portfolio."
 
@@ -38,7 +64,7 @@ const IndexPage = () => {
                   <i className="fab fa-github text-2xl"></i></a>
               </li>
               <li>
-                <a href="https://linkedin.com/in/pratikvar" target='_blank' rel='noreferrer' title='LinkedIn'
+                <a href="https://linkedin.com/in/pratv" target='_blank' rel='noreferrer' title='LinkedIn'
                   className='h-10 w-10 flex items-center justify-center rounded-full border text-blue-700 hover:bg-gray-50 hover:shadow transition-all duration-100 active:bg-gray-100'>
                   <i className="fab fa-linkedin text-2xl"></i></a>
               </li>
@@ -69,7 +95,14 @@ const IndexPage = () => {
               </p>
             </div>
             <div className='mt-6 sm:mt-0 sm:ml-12 lg:ml-16 grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 justify-items-center items-center max-w-xs w-full gap-6 sm:gap-4 md:gap-5 px-9 py-6 sm:p-6 lg:p-8 bg-gradient-to-tl from-blue-50 to-gray-50 rounded-xl shadow-inner'>
-              bruh
+              <img src={reactLogo} className="w-10 h-10" alt="Logo" />
+              <img src={sassLogo} className="w-10 h-10" alt="Logo" />
+              <img src={tailwindLogo} className="w-10 h-10" alt="Logo" />
+              <img src={gatsbyLogo} className="w-10 h-10" alt="Logo" />
+              <img src={bootstrapLogo} className="w-10 h-10" alt="Logo" />
+              <img src={jqueryLogo} className="w-10 h-10" alt="Logo" />
+              <img src={d3Logo} className="w-10 h-10" alt="Logo" />
+              <img src={muiLogo} className="w-10 h-10" alt="Logo" />
             </div>
           </div>
           <div className="flex w-full flex-col sm:flex-row-reverse justify-between items-center px-2 sm:px-8 lg:px-16">
@@ -84,13 +117,17 @@ const IndexPage = () => {
               </p>
             </div>
             <div className='mt-6 sm:mt-0 sm:mr-12 lg:mr-16 grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 justify-items-center items-center max-w-xs w-full gap-6 sm:gap-4 md:gap-5 px-9 py-6 sm:p-4 lg:p-8 bg-gradient-to-tl from-purple-50 to-gray-50 rounded-xl shadow-inner'>
-              bruh
+              <img src={figmaLogo} className="w-10 h-10" alt="Logo" />
+              <img src={vscodeLogo} className="w-10 h-10" alt="Logo" />
+              <img src={photoshopLogo} className="w-10 h-10" alt="Logo" />
+              <img src={xdLogo} className="w-10 h-10" alt="Logo" />
             </div>
           </div>
           <div className='flex w-full flex-col sm:flex-row justify-between items-center px-2 sm:px-8 lg:px-16'>
             <div className='max-w-md sm:max-w-xs flex-shrink-0 md:flex-shrink md:max-w-2xl w-full'>
               <h2 className='mb-2 sm:mb-4 lg:mb-6'>For the back-end I prefer to use <span className='text-amber-600'>Firebase</span>.</h2>
               <p className='text-gray-500'>Working with APIs has also made me familiar with
+                <span className='text-black'> GraphQL</span>,
                 <span className='text-black'> Postman</span>, and a few AWS services like
                 <span className='text-black'> S3</span>,
                 <span className='text-black'> EC2</span>,
@@ -98,8 +135,11 @@ const IndexPage = () => {
                 <span className='text-black'> CloudFront</span>.
               </p>
             </div>
-            <div className='mt-6 sm:mt-0 sm:ml-12 lg:ml-16 grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 max-w-xs w-full justify-items-center items-center gap-6 sm:gap-3 md:gap-5 px-9 py-6 sm:p-4 lg:p-8 bg-gradient-to-tl from-orange-50 to-gray-50 rounded-xl shadow-inner'>
-              bruh
+            <div className='mt-6 sm:mt-0 sm:ml-12 lg:ml-16 grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 max-w-xs w-full justify-items-center items-center gap-6 sm:gap-3 md:gap-5 px-9 py-6 sm:p-4 lg:p-8 bg-gradient-to-tl from-orange-50 to-gray-50 rounded-xl shadow-inner'>
+              <img src={firebaseLogo} className="w-10 h-10" alt="Logo" />
+              <img src={graphqlLogo} className="w-10 h-10" alt="Logo" />
+              <img src={postmanLogo} className="w-10 h-10" alt="Logo" />
+              <img src={awsLogo} className="w-10 h-10" alt="Logo" />
             </div>
           </div>
           <div className="flex w-full flex-col sm:flex-row-reverse justify-between items-center px-2 sm:px-8 lg:px-16">
@@ -111,8 +151,13 @@ const IndexPage = () => {
                 <span className='text-black'> C#</span>.
               </p>
             </div>
-            <div className='mt-6 sm:mt-0 sm:mr-12 lg:mr-16 grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 max-w-xs w-full justify-items-center items-center gap-6 sm:gap-4 md:gap-5 px-9 py-6 sm:p-4 lg:p-8 bg-gradient-to-tl from-blueGrey-50 to-gray-50 rounded-xl shadow-inner'>
-              bruh
+            <div className='mt-6 sm:mt-0 sm:mr-12 lg:mr-16 grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 max-w-xs w-full justify-items-center items-center gap-6 sm:gap-4 md:gap-5 px-9 py-6 sm:p-4 lg:p-8 bg-gradient-to-tl from-green-50 to-gray-50 rounded-xl shadow-inner'>
+              <img src={htmlLogo} className="w-10 h-10" alt="Logo" />
+              <img src={cssLogo} className="w-10 h-10" alt="Logo" />
+              <img src={jsLogo} className="w-10 h-10" alt="Logo" />
+              <img src={pythonLogo} className="w-10 h-10" alt="Logo" />
+              <img src={cppLogo} className="w-10 h-10" alt="Logo" />
+              <img src={csharpLogo} className="w-10 h-10" alt="Logo" />
             </div>
           </div>
         </div>
@@ -133,4 +178,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default Home
