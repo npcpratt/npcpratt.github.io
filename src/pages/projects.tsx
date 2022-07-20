@@ -1,4 +1,4 @@
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import './projects.css'
 
 import highlight1 from '../images/projects/project1.png'
@@ -20,12 +20,12 @@ import thumbnail14 from '../images/projects/14.png'
 import thumbnail15 from '../images/projects/15.png'
 import { useState } from 'react'
 
-const ProjectArray = ({ type, title, certification, array }) => {
+const ProjectArray = ({ type, title, certification, array }: any) => {
   let content;
   if (type === 'text') content = (
     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-3 mb-8'>
       {
-        array.map(project => {
+        array.map((project: any) => {
           return (
             <div className='border flex justify-between items-center bg-gray-50 px-4 py-2 rounded-md hover:bg-white shadow hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-100'>
               <div className="cursor-default">{project.name}</div>
@@ -39,12 +39,12 @@ const ProjectArray = ({ type, title, certification, array }) => {
   else content = (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 py-3 mb-8">
       {
-        array.map(project => {
+        array.map((project: any) => {
           return (
             <div className="w-full border group relative bg-gray-50 rounded-lg overflow-hidden shadow transition-all duration-100 transform hover:-translate-y-0.5 hover:shadow-md hover:bg-white">
               <div className="relative w-full h-auto bg-gray-200">
                 <img src={project.image} alt="Thumbnail" />
-                <div className='flex justify-evenly items-center absolute top-0 w-full h-full bg-white bg-opacity-70 opacity-0 group-hover:opacity-100 transition-all duration-100' style={{backdropFilter: 'blur(20px)'}}>
+                <div className='flex justify-evenly items-center absolute top-0 w-full h-full bg-white bg-opacity-70 opacity-0 group-hover:opacity-100 transition-all duration-100' style={{ backdropFilter: 'blur(20px)' }}>
                   <a href={project.link} className='flex items-center px-2 py-1 text-lg text-white rounded-md bg-blue-700 hover:bg-blue-600 active:bg-blue-800'>View<i className='fa fa-external-link text-xs ml-1.5'></i></a>
                   <a href={project.source} className='px-2 py-1 text-lg text-white rounded-md bg-gray-700 hover:bg-gray-600 active:bg-gray-800'>Source<i className='fab fa-github ml-1.5'></i></a>
                 </div>
@@ -74,23 +74,23 @@ const Projects = () => {
 
   const recentProjects = [
     {
-      title: 'A Blogging Website',
-      desc: 'Technologies used: Gatsby, React, Tailwind CSS, GraphQL.',
-      link: 'https://nutrafam.com/',
-      source: 'https://github.com/pratvar/nutrafam',
+      title: 'My Porfolio Website',
+      desc: (<>Yep, the one you're looking at right now.<br />Built with: React and Tailwind CSS.</>),
+      source: 'https://github.com/npcpratt/portfolio',
     },
     {
-      title: 'My Porfolio Website',
-      desc: (<>Yep, the one you're looking at right now.<br/>Technologies used: Gatsby, React, Tailwind CSS.</>),
-      source: 'https://github.com/pratvar/portfolio',
-    }
+      title: 'Trading Journal',
+      desc: (<>An app I made for personal use.<br />Built with: React and Tailwind CSS.</>),
+      link: 'https://github.com/npcpratt/trading-journal',
+      source: 'https://github.com/npcpratt/portfolio',
+    },
   ]
-  
+
   const [active, setActive] = useState(0)
 
   function handleChange() {
-    document.querySelector('#slides').children[0].classList.toggle('hidden')
-    document.querySelector('#slides').children[1].classList.toggle('hidden')
+    document.querySelector('#slides')?.children[0].classList.toggle('hidden')
+    document.querySelector('#slides')?.children[1].classList.toggle('hidden')
     active === 0 ? setActive(1) : setActive(0)
   }
 
@@ -137,31 +137,31 @@ const Projects = () => {
               array={[
                 {
                   name: 'Tribute Page',
-                  link: 'https://pratvar.github.io/fCC-projects/html-css/tribute-page',
+                  link: 'https://npcpratt.github.io/fCC-projects/html-css/tribute-page',
                   source: 'https://github.com/pratvar/fCC-projects/tree/master/html-css/tribute-page',
                   image: thumbnail1
                 },
                 {
                   name: 'Survey Form',
-                  link: 'https://pratvar.github.io/fCC-projects/html-css/survey-form',
+                  link: 'https://npcpratt.github.io/fCC-projects/html-css/survey-form',
                   source: 'https://github.com/pratvar/fCC-projects/tree/master/html-css/survey-form',
                   image: thumbnail2
                 },
                 {
                   name: 'Product Landing Page',
-                  link: 'https://pratvar.github.io/fCC-projects/html-css/product-landing-page',
+                  link: 'https://npcpratt.github.io/fCC-projects/html-css/product-landing-page',
                   source: 'https://github.com/pratvar/fCC-projects/tree/master/html-css/product-landing-page',
                   image: thumbnail3
                 },
                 {
                   name: 'Technical Documentation Page',
-                  link: 'https://pratvar.github.io/fCC-projects/html-css/technical-documentation-page',
+                  link: 'https://npcpratt.github.io/fCC-projects/html-css/technical-documentation-page',
                   source: 'https://github.com/pratvar/fCC-projects/tree/master/html-css/technical-documentation-page',
                   image: thumbnail4
                 },
                 {
                   name: 'Personal Portfolio Webpage',
-                  link: 'https://pratvar.github.io/fCC-projects/html-css/personal-portfolio-webpage',
+                  link: 'https://npcpratt.github.io/fCC-projects/html-css/personal-portfolio-webpage',
                   source: 'https://github.com/pratvar/fCC-projects/tree/master/html-css/personal-portfolio-webpage',
                   image: thumbnail5
                 },
@@ -200,31 +200,31 @@ const Projects = () => {
               array={[
                 {
                   name: 'Random Quote Machine',
-                  link: 'https://pratvar.github.io/fCC-projects/frontend-libs/random-quote',
+                  link: 'https://npcpratt.github.io/fCC-projects/frontend-libs/random-quote',
                   source: 'https://github.com/pratvar/fCC-projects/tree/master/frontend-libs/random-quote',
                   image: thumbnail6
                 },
                 {
                   name: 'Markdown Previewer',
-                  link: 'https://pratvar.github.io/fCC-projects/frontend-libs/markdown-previewer',
+                  link: 'https://npcpratt.github.io/fCC-projects/frontend-libs/markdown-previewer',
                   source: 'https://github.com/pratvar/fCC-projects/tree/master/frontend-libs/markdown-previewer',
                   image: thumbnail7
                 },
                 {
                   name: 'Drum Machine',
-                  link: 'https://pratvar.github.io/fCC-projects/frontend-libs/drum-machine',
+                  link: 'https://npcpratt.github.io/fCC-projects/frontend-libs/drum-machine',
                   source: 'https://github.com/pratvar/fCC-projects/tree/master/frontend-libs/drum-machine',
                   image: thumbnail8
                 },
                 {
                   name: 'JavaScript Calculator',
-                  link: 'https://pratvar.github.io/fCC-projects/frontend-libs/js-calculator',
+                  link: 'https://npcpratt.github.io/fCC-projects/frontend-libs/js-calculator',
                   source: 'https://github.com/pratvar/fCC-projects/tree/master/frontend-libs/js-calculator',
                   image: thumbnail9
                 },
                 {
                   name: '25 + 5 Clock',
-                  link: 'https://pratvar.github.io/fCC-projects/frontend-libs/pomodoro-timer',
+                  link: 'https://npcpratt.github.io/fCC-projects/frontend-libs/pomodoro-timer',
                   source: 'https://github.com/pratvar/fCC-projects/tree/master/frontend-libs/pomodoro-timer',
                   image: thumbnail10
                 },
@@ -236,31 +236,31 @@ const Projects = () => {
               array={[
                 {
                   name: 'Bar Chart',
-                  link: 'https://pratvar.github.io/fCC-projects/data-visualization/bar-chart',
+                  link: 'https://npcpratt.github.io/fCC-projects/data-visualization/bar-chart',
                   source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/bar-chart',
                   image: thumbnail11
                 },
                 {
                   name: 'Scatterplot Graph',
-                  link: 'https://pratvar.github.io/fCC-projects/data-visualization/scatterplot-graph',
+                  link: 'https://npcpratt.github.io/fCC-projects/data-visualization/scatterplot-graph',
                   source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/scatterplot-graph',
                   image: thumbnail12
                 },
                 {
                   name: 'Heat Map',
-                  link: 'https://pratvar.github.io/fCC-projects/data-visualization/heat-map',
+                  link: 'https://npcpratt.github.io/fCC-projects/data-visualization/heat-map',
                   source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/heat-map',
                   image: thumbnail13
                 },
                 {
                   name: 'Choropleth Map',
-                  link: 'https://pratvar.github.io/fCC-projects/data-visualization/choropleth-map',
+                  link: 'https://npcpratt.github.io/fCC-projects/data-visualization/choropleth-map',
                   source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/choropleth-map',
                   image: thumbnail14
                 },
                 {
                   name: 'Treemap Diagram',
-                  link: 'https://pratvar.github.io/fCC-projects/data-visualization/treemap',
+                  link: 'https://npcpratt.github.io/fCC-projects/data-visualization/treemap',
                   source: 'https://github.com/pratvar/fCC-projects/tree/master/data-visualization/treemap',
                   image: thumbnail15
                 },

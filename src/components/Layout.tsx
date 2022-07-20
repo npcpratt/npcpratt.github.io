@@ -2,16 +2,16 @@ import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom';
 import favicon from '../images/favicon.svg'
 
-const Layout = ({ location, description, children }) => {
+const Layout = ({ location, description, children }: any) => {
   let title, url;
   if (location === 'about') {
-    title = 'Pratik Var | Front-End Developer'
+    title = 'Pratik V | Front-End Developer'
     url = 'https://pratvar.com'
   } else if (location === 'projects') {
-    title = 'Projects | Pratik Var'
+    title = 'Projects | Pratik V'
     url = 'https://pratvar.com/projects'
   } else if (location === 'contact') {
-    title = 'Contact | Pratik Var'
+    title = 'Contact | Pratik V'
     url = 'https://pratvar.com/contact'
   }
 
@@ -47,11 +47,11 @@ const Layout = ({ location, description, children }) => {
         </ul>
       </nav>
 
-      <main className='pt-14 flex-grow w-full flex flex-col'>{children}</main>
+      <main className='pt-12 sm:pt-14 flex-grow w-full flex flex-col'>{children}</main>
 
       <footer className='px-6 py-8 sm:px-8 sm:py-16 md:px-14 bg-gray-50'>
         <div className='flex flex-col-reverse items-center gap-6 sm:flex-row justify-between max-w-screen-xl mx-auto'>
-          <p className='text-gray-700'>© 2021 Pratik Var</p>
+          <p className='text-gray-700'>© 2022 Pratik V</p>
           <p className='font-semibold'>Designed and coded by Pratik.</p>
         </div>
       </footer>
