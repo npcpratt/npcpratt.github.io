@@ -42,18 +42,16 @@ const Home = () => {
             </div>
           </div>
           <div className="md:col-span-2 md:ml-20 lg:ml-14 flex flex-col mb-8 md:mb-0 md:py-8 items-center md:items-start text-center md:text-left">
-            {/* <p className='text-gray-800'>Hi, I'm</p> */}
-            <h1 className='md:my-1'>Hi, I'm <span className='font-extrabold'>Pratik</span></h1>
+            <h1 className='md:my-1'>Hi, I'm <span className='font-extrabold'>Pratik Var</span></h1>
             <h3 className='text-gray-800 my-1'>a front-end developer</h3>
             <p className='flex items-center text-slate-600 mt-1 text-base lg:text-lg'><i className="fa fa-map-marked-alt mr-2"></i>Rajkot, India</p>
             <p className='py-6 text-gray-500 text-lg'>
               I strive to produce quality code, and I have an eye for design.
             </p>
-            {/* <ul className='grid grid-cols-3 gap-2'> */}
             <ul className='flex space-x-2'>
               <li>
-                <a href='/Resume.pdf' target='_blank' rel='noreferrer' title='Resume'
-                  className='h-10 px-3 flex items-center justify-center rounded-full border text-slate-600 hover:bg-gray-50 hover:shadow transition-all duration-100 active:bg-gray-100 space-x-2'>
+                <a href='/resume.pdf' target='_blank' rel='noreferrer' title='Resume'
+                  className='h-10 px-3.5 flex items-center justify-center rounded-full border text-slate-600 hover:bg-gray-50 hover:shadow transition-all duration-100 active:bg-gray-100 space-x-3'>
                   <i className="fa fa-file-alt text-lg"></i>
                   <span>Resume</span>
                 </a>

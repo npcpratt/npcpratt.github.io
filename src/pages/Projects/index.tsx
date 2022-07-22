@@ -22,16 +22,22 @@ import './projects.css'
 
 const Projects = () => {
 
-  const recentProjects = [
+  const featured = [
+    // {
+    //   title: 'Trading Journal',
+    //   desc: (<>An app that helps me keep track of my trades.<br />Built with: React and Material-UI.</>),
+    //   link: 'https://trading-journal-c6889.web.app/',
+    //   source: 'https://github.com/npcpratt/trading-journal',
+    // },
+    {
+      title: 'A blogging website',
+      desc: (<>Built with: Gatsby and Tailwind CSS.</>),
+      link: 'https://nutrafam-website.web.app/',
+      source: 'https://github.com/npcpratt/nutrafam',
+    },
     {
       title: 'My Porfolio Website',
       desc: (<>Yep, the one you're looking at right now.<br />Built with: React and Tailwind CSS.</>),
-      source: 'https://github.com/npcpratt/portfolio',
-    },
-    {
-      title: 'Trading Journal',
-      desc: (<>An app I made for personal use.<br />Built with: React and Tailwind CSS.</>),
-      link: 'https://github.com/npcpratt/trading-journal',
       source: 'https://github.com/npcpratt/portfolio',
     },
   ]
@@ -46,31 +52,31 @@ const Projects = () => {
 
   return (
     <Layout location='projects'>
-      <section id='recent-projects' className='px-8 pb-10 sm:pb-20 bg-gradient-to-br from-lightGreen-50 to-teal-50'>
+      <section id='recent-projects' className='px-8 pb-10 sm:pb-20 bg-gradient-to-br from-green-50 to-teal-50'>
         <div className='max-w-screen-2xl w-full mx-auto py-16'>
-          <h2 className='font-semibold tracking-tight mb-10'>Recent Projects</h2>
+          <h2 className='font-semibold tracking-tight mb-10'>Featured Projects</h2>
           <div className='grid lg:grid-cols-2 justify-items-center gap-4 lg:gap-8 w-full'>
             <div className='flex items-center'>
-              <button onClick={handleChange} className='mr-4 focus:outline-none h-8 w-8 sm:h-10 sm:w-10 text-sm sm:text-lg flex items-center justify-center rounded-full shadow-md bg-grey-50 transition-all active:bg-gray-100 hover:shadow-lg cursor-pointer'>
+              <button onClick={handleChange} className='mr-4 outline-none h-8 w-8 sm:h-10 sm:w-10 text-sm sm:text-lg flex items-center justify-center rounded-full shadow-md transition-all bg-gray-50 active:bg-gray-100 hover:shadow-lg cursor-pointer'>
                 <i className="fas fa-chevron-left"></i>
               </button>
               <div id='slides'>
                 <img src={highlight1} className="-ml-4 image" alt="Thumbnail" />
                 <img src={highlight2} className="-ml-4 image hidden" alt="Thumbnail" />
               </div>
-              <button onClick={handleChange} className='ml-4 focus:outline-none h-8 w-8 sm:h-10 sm:w-10 text-sm sm:text-lg flex items-center justify-center rounded-full shadow-md bg-grey-50 transition-all active:bg-gray-100 hover:shadow-lg cursor-pointer'>
+              <button onClick={handleChange} className='ml-4 outline-none h-8 w-8 sm:h-10 sm:w-10 text-sm sm:text-lg flex items-center justify-center rounded-full shadow-md transition-all bg-gray-50 active:bg-gray-100 hover:shadow-lg cursor-pointer'>
                 <i className="fas fa-chevron-right"></i>
               </button>
             </div>
             <div className='pt-10 lg:pt-2 xl:pt-10'>
-              <h2 className='font-bold tracking-tight mb-4'>{recentProjects[active].title}</h2>
-              <p className='mb-8 max-w-lg text-gray-800'>{recentProjects[active].desc}</p>
+              <h2 className='font-bold tracking-tight mb-4'>{featured[active].title}</h2>
+              <p className='mb-8 max-w-lg text-gray-800'>{featured[active].desc}</p>
               <div className="flex">
                 {
-                  recentProjects[active].link &&
-                  <a className='flex items-center py-1 px-2.5 shadow bg-blue-700 rounded-md sm:text-lg text-white transition-all hover:bg-blue-600 active:bg-blue-800 mr-3' href={recentProjects[active].link}>View<i className='ml-2 text-xs sm:text-sm fa fa-external-link'></i></a>
+                  featured[active].link &&
+                  <a className='flex items-center py-1 px-2.5 shadow bg-blue-700 rounded-md sm:text-lg text-white transition-all hover:bg-blue-600 active:bg-blue-800 mr-3' href={featured[active].link}>View<i className='ml-2 text-xs sm:text-sm fa fa-external-link'></i></a>
                 }
-                <a className='flex items-center py-1 px-2.5 shadow bg-gray-700 rounded-md sm:text-lg text-white transition-all hover:bg-gray-600 active:bg-gray-800' href={recentProjects[active].source}>Source<i className='ml-2 fab fa-github'></i></a>
+                <a className='flex items-center py-1 px-2.5 shadow bg-gray-700 rounded-md sm:text-lg text-white transition-all hover:bg-gray-600 active:bg-gray-800' href={featured[active].source}>Source<i className='ml-2 fab fa-github'></i></a>
               </div>
             </div>
           </div>
