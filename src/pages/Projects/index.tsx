@@ -15,56 +15,60 @@ import thumbnail12 from '../../images/projects/12.png'
 import thumbnail13 from '../../images/projects/13.png'
 import thumbnail14 from '../../images/projects/14.png'
 import thumbnail15 from '../../images/projects/15.png'
-import highlight1 from '../../images/projects/project1.png'
-import highlight2 from '../../images/projects/project2.png'
+import featured1 from '../../images/projects/featured1.png'
+import featured2 from '../../images/projects/featured2.png'
+import featured3 from '../../images/projects/featured3.png'
 import ProjectArray from './ProjectArray'
 import './projects.css'
 
 const Projects = () => {
 
   const featured = [
-    // {
-    //   title: 'Trading Journal',
-    //   desc: (<>An app that helps me keep track of my trades.<br />Built with: React and Material-UI.</>),
-    //   link: 'https://trading-journal-c6889.web.app/',
-    //   source: 'https://github.com/npcpratt/trading-journal',
-    // },
     {
-      title: 'A blogging website',
-      desc: (<>Built with: Gatsby and Tailwind CSS.</>),
+      title: 'Trading Journal',
+      desc: (<>An app to help me keep track of my trades.<br />Built with: React, Material-UI, Firebase.</>),
+      link: 'https://trading-journal-c6889.web.app/',
+      source: 'https://github.com/npcpratt/trading-journal',
+    },
+    {
+      title: 'A Blog Website',
+      desc: (<>Built with: Gatsby, React, and Tailwind CSS.</>),
       link: 'https://nutrafam-website.web.app/',
       source: 'https://github.com/npcpratt/nutrafam',
     },
     {
       title: 'My Porfolio Website',
-      desc: (<>Yep, the one you're looking at right now.<br />Built with: React and Tailwind CSS.</>),
+      desc: (<>Yep, the one you're looking at right now.<br />Built with: React (TypeScript) and Tailwind.</>),
       source: 'https://github.com/npcpratt/portfolio',
     },
   ]
 
   const [active, setActive] = useState(0)
 
-  function handleChange() {
-    document.querySelector('#slides')?.children[0].classList.toggle('hidden')
-    document.querySelector('#slides')?.children[1].classList.toggle('hidden')
-    active === 0 ? setActive(1) : setActive(0)
+  function handleChange(direction: string) {
+    if (direction === "next") {
+      setActive(prev => prev === 2 ? 0 : prev + 1)
+    } else {
+      setActive(prev => prev === 0 ? 2 : prev - 1)
+    }
   }
 
   return (
     <Layout location='projects'>
-      <section id='recent-projects' className='px-8 pb-10 sm:pb-20 bg-gradient-to-br from-green-50 to-teal-50'>
+      <section id='recent-projects' className='px-8 pb-10 sm:pb-20 bg-gradient-to-br from-slate-50 to-slate-200'>
         <div className='max-w-screen-2xl w-full mx-auto py-16'>
           <h2 className='font-semibold tracking-tight mb-10'>Featured Projects</h2>
           <div className='grid lg:grid-cols-2 justify-items-center gap-4 lg:gap-8 w-full'>
             <div className='flex items-center'>
-              <button onClick={handleChange} className='mr-4 outline-none h-8 w-8 sm:h-10 sm:w-10 text-sm sm:text-lg flex items-center justify-center rounded-full shadow-md transition-all bg-gray-50 active:bg-gray-100 hover:shadow-lg cursor-pointer'>
+              <button onClick={() => handleChange("prev")} className='mr-4 outline-none h-8 w-8 sm:h-10 sm:w-10 text-sm sm:text-lg flex items-center justify-center rounded-full shadow-md transition-all bg-gray-50 active:bg-gray-100 hover:shadow-lg cursor-pointer'>
                 <i className="fas fa-chevron-left"></i>
               </button>
               <div id='slides'>
-                <img src={highlight1} className="-ml-4 image" alt="Thumbnail" />
-                <img src={highlight2} className="-ml-4 image hidden" alt="Thumbnail" />
+                <img src={featured1} className={`-ml-4 image ${active === 0 ? "" : "hidden"}`} alt="Thumbnail" />
+                <img src={featured2} className={`-ml-4 image ${active === 1 ? "" : "hidden"}`} alt="Thumbnail" />
+                <img src={featured3} className={`-ml-4 image ${active === 2 ? "" : "hidden"}`} alt="Thumbnail" />
               </div>
-              <button onClick={handleChange} className='ml-4 outline-none h-8 w-8 sm:h-10 sm:w-10 text-sm sm:text-lg flex items-center justify-center rounded-full shadow-md transition-all bg-gray-50 active:bg-gray-100 hover:shadow-lg cursor-pointer'>
+              <button onClick={() => handleChange("next")} className='ml-4 outline-none h-8 w-8 sm:h-10 sm:w-10 text-sm sm:text-lg flex items-center justify-center rounded-full shadow-md transition-all bg-gray-50 active:bg-gray-100 hover:shadow-lg cursor-pointer'>
                 <i className="fas fa-chevron-right"></i>
               </button>
             </div>
