@@ -35,6 +35,7 @@
     "static/media/csharp.svg": "/static/media/csharp.1d36662939273dc380159eb0759b6f06.svg",
     "static/media/python.svg": "/static/media/python.42f87cb3c004a68af35276b967671a1c.svg",
     "static/media/bootstrap.svg": "/static/media/bootstrap.c4f0a282577225ed29ca867983bf3dd9.svg",
+    "index.html": "/index.html",
     "static/media/gatsby.svg": "/static/media/gatsby.08d0682b36eed91308d286d891ffd3e6.svg",
     "static/media/css.svg": "/static/media/css.aec31ad6887c3a820a1b3b8e2b9d9937.svg",
     "static/media/html.svg": "/static/media/html.50b3a9cc6fa66c879f2f35654529a08b.svg",
@@ -43,7 +44,6 @@
     "static/media/vscode.svg": "/static/media/vscode.ccdcf4067a67bc77d69f2c0fb9b3ab24.svg",
     "static/media/figma.svg": "/static/media/figma.d8e11e391a62a9686ea585915c747d73.svg",
     "static/media/mui.svg": "/static/media/mui.456bfb02539777f812137c514d397868.svg",
-    "index.html": "/index.html",
     "static/media/js.svg": "/static/media/js.0dd1cf6c80bb500c655a617006c1148a.svg",
     "main.63170a1f.css.map": "/static/css/main.63170a1f.css.map",
     "main.40cd5a3a.js.map": "/static/js/main.40cd5a3a.js.map"
