@@ -25,9 +25,9 @@ const ProjectArray = ({ type, title, certification, array }: any) => {
             <div key={i} className="w-full border group relative bg-gray-50 rounded-lg overflow-hidden shadow transition-all duration-100 transform hover:-translate-y-0.5 hover:shadow-md hover:bg-white">
               <div className="relative w-full h-auto bg-gray-200">
                 <img src={project.image} alt="Thumbnail" />
-                <div className='flex justify-evenly items-center absolute top-0 w-full h-full bg-white bg-opacity-70 opacity-0 group-hover:opacity-100 transition-all duration-100' style={{ backdropFilter: 'blur(20px)' }}>
-                  <a href={project.link} className='flex items-center px-2 py-1 text-lg text-white rounded-md bg-blue-700 hover:bg-blue-600 active:bg-blue-800'>View<i className='fa fa-external-link text-xs ml-1.5'></i></a>
-                  <a href={project.source} className='px-2 py-1 text-lg text-white rounded-md bg-gray-700 hover:bg-gray-600 active:bg-gray-800'>Source<i className='fab fa-github ml-1.5'></i></a>
+                <div className='flex flex-col sm:flex-row justify-evenly items-center absolute top-0 w-full h-full bg-white bg-opacity-70 opacity-0 group-hover:opacity-100 transition-all duration-100' style={{ backdropFilter: 'blur(20px)' }}>
+                  <a href={project.link} className='flex items-center px-2 py-1 text-base lg:text-lg text-white rounded-md bg-blue-700 hover:bg-blue-600 active:bg-blue-800'>View<i className='fa fa-external-link text-xs ml-1.5'></i></a>
+                  <a href={project.source} className='px-2 py-1 text-base lg:text-lg text-white rounded-md bg-gray-700 hover:bg-gray-600 active:bg-gray-800'>Source<i className='fab fa-github ml-1.5'></i></a>
                 </div>
               </div>
               <div className='flex items-center justify-between py-2 px-3 cursor-default'>
